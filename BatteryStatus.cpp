@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <iostream>
 #include <string>
-#include "Checker.h"
+#include "BatteryStatus.h"
 using namespace std;
 
 extern Language PrintLanguage = ENGLISH;
