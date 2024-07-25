@@ -2,6 +2,7 @@
 #include <string>
 #include "PrintMessage.hpp"
 
+Language currentLanguage = ENGLISH;
 void printMessage(const std::string& messageEnglish, const std::string& messageGerman)
 {
     if (currentLanguage == ENGLISH) {
