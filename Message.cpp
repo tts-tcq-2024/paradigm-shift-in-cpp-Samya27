@@ -15,13 +15,13 @@ void printWarningIfNeeded(float value, float upperLimit, float lowerLimit, const
 {
     float UpperWarningThreshold = upperLimit - (upperLimit * WARNING_TOLERANCE_PERCENTAGE);
     float LowerWarningThreshold = lowerLimit + (lowerLimit * WARNING_TOLERANCE_PERCENTAGE);
+    bool approachingPeak = (value >= UpperWarningThreshold);
+    bool approachingLow = (value <= LowerWarningThreshold && LowerWarningThreshold != 0);
 
-    if (value >= UpperWarningThreshold) {
+    if (approachingPeak) {
         printMessage( messageApproachPeak,"Warnung: Annäherung an den Spitzenwert\n");
     }
-    else if ((LowerWarningThreshold != 0){
-        if(value <= LowerWarningThreshold){
+    else if (approachingLow){
         printMessage( messageApproachlow , "Warnung: Annäherung an die Entlade-Spitze\n");
-    }
     }
 }
