@@ -33,7 +33,16 @@ bool chargeRateIsOk(float chargeRate)
 
 bool batteryIsOk(float temperature, float soc, float chargeRate) 
 {
-  return(temperatureIsOk(temperature)&socIsOk(soc)&chargeRateIsOk(chargeRate));
+  bool BatteryStatus = temperatureIsOk(temperature)&socIsOk(soc)&chargeRateIsOk(chargeRate);
+  if(BatteryStatus)
+  {
+    printMessage("Battery status is not OK!\n", "Batteriezustand ist ok!\n");
+  }
+  else
+  {
+    printMessage("Battery status is not OK!\n", "Batteriezustand ist nicht ok!\n");
+  }
+  return(BatteryStatus);
 }
 int main() {
   assert(batteryIsOk(25, 70, 0.7) == true);
