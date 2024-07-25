@@ -16,12 +16,12 @@ const std::map<std::string, std::string> ErrorMessageGerman =
                     {"BatteryOK", "Batteriezustand ist ok!"},
                     {"BatteryNotOK", "Batteriezustand ist nicht ok!"}};
 
-void printMessage(const Language PrintLanguage, const std::string& key)
+void printMessage(const Language Print_Language, const std::string& key)
 {
-    if (PrintLanguage == ENGLISH) {
+    if (Print_Language == ENGLISH) {
       //std:string messageEnglish= ErrorMessageEnglish.at(key);    
       std::cout << ErrorMessageEnglish.at(key) << "\n";
-    } else if (PrintLanguage == GERMAN) {
+    } else if (Print_Language == GERMAN) {
       //std:string messageGerman= ErrorMessageGerman.at(key);
       std::cout << ErrorMessageGerman.at(key) << "\n";
     }
