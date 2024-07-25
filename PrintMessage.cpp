@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "PrintMessage.hpp"
+#include "PrintMessage.h"
 
 Language currentLanguage = ENGLISH;
 void printMessage(const std::string& messageEnglish, const std::string& messageGerman)
