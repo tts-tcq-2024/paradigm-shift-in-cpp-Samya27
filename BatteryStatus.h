@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include "PrintMessage.h"
-
+const float CHARGE_RATE_LOWER_LIMIT = (float) NULL;
 typedef struct Battery{
 const float temperature_p[2];
 const float soc_p[2];
@@ -14,5 +14,4 @@ const Battery myBattery = {
     {20,80},
     {CHARGE_RATE_LOWER_LIMIT, 0.8}};
 
-const float CHARGE_RATE_LOWER_LIMIT = (float) NULL;
 bool batteryIsOk(float temperature, float soc, float chargeRate) ;
