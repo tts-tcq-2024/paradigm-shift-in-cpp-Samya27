@@ -3,7 +3,7 @@
 #include <string>
 #include "PrintMessage.h"
 using namespace std;
-const float CHARGE_RATE_LOWER_LIMIT = NULL;
+const float CHARGE_RATE_LOWER_LIMIT = (float) NULL;
 
 bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
 {
