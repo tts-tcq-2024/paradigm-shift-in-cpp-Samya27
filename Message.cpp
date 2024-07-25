@@ -19,7 +19,7 @@ void printWarningIfNeeded(float value, float upperLimit, float lowerLimit, const
     if (value >= UpperWarningThreshold) {
         printMessage( messageApproachPeak,"Warnung: Annäherung an den Spitzenwert\n");
     }
-    else if ((value <= LowerWarningThreshold) && (lowerLimit != 0)) {
+    else if ((LowerWarningThreshold != 0) && (value <= LowerWarningThreshold)) {
         printMessage( messageApproachlow , "Warnung: Annäherung an die Entlade-Spitze\n");
     }
 }
