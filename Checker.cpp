@@ -18,9 +18,8 @@ bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& ke
       printMessage(PrintLanguage ,key);
       return false;
     }
-    return true;
   }
-  
+  return true;
 }
 
 bool temperatureIsOk(float temperature)
