@@ -4,7 +4,7 @@
 #include "PrintMessage.h"
 
 typedef struct Battery{
-const float temperature_p[];
+const float temperature_p[2];
 const float soc_p[2];
 const float chargeRate_p[2];
 }Battery;
