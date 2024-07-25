@@ -23,17 +23,17 @@ bool IsInRange(const float value,const float *thresholds, const string& key)
 
 bool temperatureIsOk(float temperature)
 {
-  bool status = IsInRange(temperature, &Battery.temperature_p, "Temperature");
+  bool status = IsInRange(temperature, myBattery.temperature_p, "Temperature");
   return status;
 }
 bool socIsOk(float soc)
 {
-  bool status = IsInRange(soc, &Battery.soc_p, "soc");
+  bool status = IsInRange(soc, myBattery.soc_p, "soc");
   return status;
 }
 bool chargeRateIsOk(float chargeRate)
 {
-  bool status = IsInRange(chargeRate, &Battery.chargeRate_p, "chargeRate");
+  bool status = IsInRange(chargeRate, myBattery.chargeRate_p, "chargeRate");
   return status;
 }
 
