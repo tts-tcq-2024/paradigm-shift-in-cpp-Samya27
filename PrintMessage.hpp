@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include "Checker.hpp"
 
 enum Language { ENGLISH, GERMAN };
 Language currentLanguage = ENGLISH;
