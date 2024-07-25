@@ -7,14 +7,14 @@ using namespace std;
 bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
 {
   if(Lowerlimit!=(float) NULL){
-    if((value<Lowerlimit) && (value>UpperLimit){
-      printMessage(currentLanguage ,key);
+    if((value<Lowerlimit) && (value>UpperLimit)){
+      printMessage(PrintLanguage ,key);
       return false;
     }
   }
   else{
     if(value>UpperLimit){
-      printMessage(currentLanguage ,key);
+      printMessage(PrintLanguage ,key);
       return false;
     }
     return true;
@@ -58,11 +58,11 @@ bool batteryIsOk(float temperature, float soc, float chargeRate)
   bool BatteryStatus = temperatureIsOk(temperature)&socIsOk(soc)&chargeRateIsOk(chargeRate);
   if(BatteryStatus)
   {
-    printMessage(currentLanguage ,"BatteryOK");
+    printMessage(PrintLanguage ,"BatteryOK");
   }
   else
   {
-    printMessage(currentLanguage ,"BatteryNotOK");
+    printMessage(PrintLanguage ,"BatteryNotOK");
   }
   return(BatteryStatus);
 }
