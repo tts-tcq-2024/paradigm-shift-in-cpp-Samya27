@@ -3,13 +3,13 @@
 #include <map>
 #include "PrintMessage.h"
 
-const std::map<string, string> ErrorMessageEnglish = 
+const std::map<std::string, std::string> ErrorMessageEnglish = 
                     {{"Temperature", "Temperature out of range!"}, 
                     {"soc", "State of Charge out of range!"},
                     {"chargeRate", "Charge Rate out of range!"},
                     {"BatteryOK", "Battery status is OK!"},
                     {"BatteryNotOK", "Battery status is not OK!"}};
-const std::map<string, string> ErrorMessageGerman = 
+const std::map<std::string, std::string> ErrorMessageGerman = 
                     {{"Temperature", "Temperatur außerhalb des Bereichs!"}, 
                     {"soc", "Ladezustand außerhalb des Bereichs!"},
                     {"chargeRate", "Lade-Rate außerhalb des Bereichs!"},
