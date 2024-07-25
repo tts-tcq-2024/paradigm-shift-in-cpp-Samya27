@@ -1,9 +1,8 @@
 #include <assert.h>
 #include <iostream>
 #include <string>
-#include "PrintMessage.h"
+#include "Checker.h"
 using namespace std;
-const float CHARGE_RATE_LOWER_LIMIT = (float) NULL;
 
 bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
 {
