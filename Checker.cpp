@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <iostream>
-#include "PrintMessage.hpp"
+#include "PrintMessage.h"
 using namespace std;
 
 bool temperatureIsOk(float temperature)
