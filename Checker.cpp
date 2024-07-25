@@ -7,18 +7,18 @@ const float CHARGE_RATE_LOWER_LIMIT = (float) NULL;
 
 bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
 {
-  if(Lowerlimit!= (float) NULL){
-    if((value<Lowerlimit) && (value>UpperLimit)){
+  //if(Lowerlimit!= (float) NULL){
+    if((Lowerlimit!= (float) NULL) && ((value<Lowerlimit) && (value>UpperLimit)){
       printMessage(PrintLanguage ,key);
       return false;
     }
-  }
-  else{
-    if(value>UpperLimit){
+  //}
+  //else{
+    else if(value>UpperLimit){
       printMessage(PrintLanguage ,key);
       return false;
     }
-  }
+  //}
   return true;
 }
 
