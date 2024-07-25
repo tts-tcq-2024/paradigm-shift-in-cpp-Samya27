@@ -4,6 +4,7 @@
 #include "Checker.h"
 using namespace std;
 
+extern Language PrintLanguage = ENGLISH;
 bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
 {
   //if(Lowerlimit!= (float) NULL){
