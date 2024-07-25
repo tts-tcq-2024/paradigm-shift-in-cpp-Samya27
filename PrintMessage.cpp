@@ -19,10 +19,10 @@ const std::map<std::string, std::string> ErrorMessageGerman =
 void printMessage(const Language PrintLanguage, const std::string& key)
 {
     if (PrintLanguage == ENGLISH) {
-    std:string messageEnglish= ErrorMessageEnglish.find(key);    
-    std::cout << messageEnglish << "\n";
+      //std:string messageEnglish= ErrorMessageEnglish.at(key);    
+      std::cout << ErrorMessageEnglish.at(key) << "\n";
     } else if (PrintLanguage == GERMAN) {
-        std:string messageGerman= ErrorMessageGerman.find(key);
-        std::cout << messageGerman << "\n";
+      //std:string messageGerman= ErrorMessageGerman.at(key);
+      std::cout << ErrorMessageGerman.at(key) << "\n";
     }
 }
