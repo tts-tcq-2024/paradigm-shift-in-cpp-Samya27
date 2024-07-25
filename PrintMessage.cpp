@@ -3,8 +3,6 @@
 #include <map>
 #include "PrintMessage.h"
 
-enum Language PrintLanguage = ENGLISH; 
-
 map<string, string> ErrorMessageEnglish = 
                     {{"Temperature", "Temperature out of range!"}, 
                     {"soc", "State of Charge out of range!"},
