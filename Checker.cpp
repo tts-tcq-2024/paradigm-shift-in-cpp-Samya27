@@ -45,7 +45,7 @@ bool socIsOk(float soc)
 }
 bool chargeRateIsOk(float chargeRate)
 {
-  bool status = IsInRange(chargeRate, 0.8, NULL, "chargeRate");
+  bool status = IsInRange(chargeRate, 0.8, CHARGE_RATE_LOWER_LIMIT, "chargeRate");
   // if(chargeRate > 0.8) 
   // {
   //   printMessage("Charge Rate out of range!\n", "Lade-Rate außerhalb des Bereichs!\n");
