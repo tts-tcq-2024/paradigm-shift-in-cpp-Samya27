@@ -4,4 +4,4 @@
 enum Language { ENGLISH, GERMAN };
 enum Language PrintLanguage = ENGLISH; 
 
-void printMessage(const std::string& messageEnglish, const std::string& messageGerman);
+void printMessage(const Language PrintLanguage, const std::string& key);
