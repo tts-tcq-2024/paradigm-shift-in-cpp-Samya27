@@ -18,11 +18,9 @@ const std::map<std::string, std::string> ErrorMessageGerman =
 
 void printMessage(const Language Print_Language, const std::string& key)
 {
-    if (Print_Language == ENGLISH) {
-      //std:string messageEnglish= ErrorMessageEnglish.at(key);    
+    if (Print_Language == ENGLISH) {   
       std::cout << ErrorMessageEnglish.at(key) << "\n";
     } else if (Print_Language == GERMAN) {
-      //std:string messageGerman= ErrorMessageGerman.at(key);
       std::cout << ErrorMessageGerman.at(key) << "\n";
     }
 }
