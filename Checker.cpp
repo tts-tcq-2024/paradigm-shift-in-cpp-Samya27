@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <iostream>
-using namespace std;
 #include "PrintMessage.hpp"
+using namespace std;
 
 bool temperatureIsOk(float temperature)
 {
