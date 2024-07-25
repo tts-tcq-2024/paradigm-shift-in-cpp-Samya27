@@ -6,7 +6,7 @@ using namespace std;
 
 bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
 {
-  if(Lowerlimit!= NULL){
+  if(Lowerlimit!=(float) NULL){
     if((value<Lowerlimit) && (value>UpperLimit){
       printMessage(currentLanguage ,key);
       return false;
