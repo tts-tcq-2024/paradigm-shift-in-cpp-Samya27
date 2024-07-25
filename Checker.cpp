@@ -1,12 +1,13 @@
 #include <assert.h>
 #include <iostream>
 using namespace std;
+#include "PrintMessage.hpp"
 
 bool temperatureIsOk(float temperature)
 {
   if(temperature < 0 || temperature > 45) 
   {
-    cout << "Temperature out of range!\n";
+    printMessage("Temperature out of range!\n", "Temperatur außerhalb des Bereichs!\n");
     return false;
   }
   return true;
@@ -15,7 +16,7 @@ bool socIsOk(float soc)
 {
   if(soc < 20 || soc > 80) 
   {
-    cout << "State of Charge out of range!\n";
+    printMessage("State of Charge out of range!\n", "Ladezustand außerhalb des Bereichs!\n");
     return false;
   }
   return true;
@@ -24,7 +25,7 @@ bool chargeRateIsOk(float chargeRate)
 {
   if(chargeRate > 0.8) 
   {
-    cout << "Charge Rate out of range!\n";
+    printMessage("Charge Rate out of range!\n", "Lade-Rate außerhalb des Bereichs!\n");
     return false;
   }
   return true;
