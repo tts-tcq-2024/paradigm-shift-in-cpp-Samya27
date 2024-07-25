@@ -8,7 +8,8 @@ extern Language PrintLanguage = ENGLISH;
 bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
 {
   //if(Lowerlimit!= (float) NULL){
-    if((Lowerlimit!= (float) NULL) && ((value<Lowerlimit) || (value>UpperLimit))){
+  bool indicate_flag = (Lowerlimit!= (float) NULL) && ((value<Lowerlimit) || (value>UpperLimit));
+    if(indicate_flag){
       printMessage(PrintLanguage ,key);
       return false;
     }
