@@ -14,7 +14,7 @@ bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& ke
     }
   //}
   //else{
-    else if(value>UpperLimit){
+    if(value>UpperLimit){
       printMessage(PrintLanguage ,key);
       return false;
     }
