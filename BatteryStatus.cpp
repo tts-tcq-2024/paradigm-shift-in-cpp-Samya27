@@ -7,7 +7,7 @@ using namespace std;
 #define Upperlimit_index 1;
 
 extern Language PrintLanguage = ENGLISH;
-bool IsInRange(float value, float *thresholds, const string& key)
+bool IsInRange(const float value,const float *thresholds, const string& key)
 {
   bool indicate_flag = (thresholds[Lowerlimit_index]!= (float) NULL) && ((value<thresholds[Lowerlimit_index]) || (value>thresholds[Upperlimit_index]));
     if(indicate_flag){
