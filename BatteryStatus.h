@@ -7,7 +7,7 @@ typedef struct Battery{
 const float temperature_p[];
 const float soc_p[2];
 const float chargeRate_p[2];
-}Battery
+}Battery;
 
 const Battery myBattery = {
     {0,45},
