@@ -3,12 +3,12 @@
 #include <string>
 #include "BatteryStatus.h"
 using namespace std;
-#define Lowerlimit_index 0;
-#define Upperlimit_index 1;
 
 extern Language PrintLanguage = ENGLISH;
 bool IsInRange(const float value,const float *thresholds, const string& key)
 {
+  int Lowerlimit_index = 0;
+  int Upperlimit_index = 1;
   bool indicate_flag = (thresholds[Lowerlimit_index]!= (float) NULL) && ((value<thresholds[Lowerlimit_index]) || (value>thresholds[Upperlimit_index]));
     if(indicate_flag){
       printMessage(PrintLanguage ,key);
