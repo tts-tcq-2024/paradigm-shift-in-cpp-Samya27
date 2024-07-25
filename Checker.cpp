@@ -1,34 +1,56 @@
 #include <assert.h>
 #include <iostream>
+#include <string>
 #include "PrintMessage.h"
 using namespace std;
 
+bool IsInRange(float value, float UpperLimit, float Lowerlimit, const string& key)
+{
+  if(Lowerlimit!= NULL){
+    if((value<Lowerlimit) && (value>UpperLimit){
+      printMessage(currentLanguage ,key);
+      return false;
+    }
+  }
+  else{
+    if(value>UpperLimit){
+      printMessage(currentLanguage ,key);
+      return false;
+    }
+    return true;
+  }
+  
+}
+
 bool temperatureIsOk(float temperature)
 {
-  if(temperature < 0 || temperature > 45) 
-  {
-    printMessage("Temperature out of range!\n", "Temperatur außerhalb des Bereichs!\n");
-    return false;
-  }
-  return true;
+  bool status = IsInRange(temperature, 45, 0, "Temperature");
+  // if(temperature < 0 || temperature > 45) 
+  // {
+  //   printMessage("Temperature out of range!\n", "Temperatur außerhalb des Bereichs!\n");
+  //   return false;
+  // }
+  return status;
 }
 bool socIsOk(float soc)
 {
-  if(soc < 20 || soc > 80) 
-  {
-    printMessage("State of Charge out of range!\n", "Ladezustand außerhalb des Bereichs!\n");
-    return false;
-  }
-  return true;
+  bool status = IsInRange(soc, 80, 20, "soc");
+  // if(soc < 20 || soc > 80) 
+  // {
+  //   printMessage("State of Charge out of range!\n", "Ladezustand außerhalb des Bereichs!\n");
+  //   return false;
+  // }
+  return status;
 }
 bool chargeRateIsOk(float chargeRate)
 {
-  if(chargeRate > 0.8) 
-  {
-    printMessage("Charge Rate out of range!\n", "Lade-Rate außerhalb des Bereichs!\n");
-    return false;
-  }
-  return true;
+  bool status = IsInRange(chargeRate, 0.8, NULL, "chargeRate");
+  // if(chargeRate > 0.8) 
+  // {
+  //   printMessage("Charge Rate out of range!\n", "Lade-Rate außerhalb des Bereichs!\n");
+  //   return false;
+  // }
+  return status;
 }
 
 bool batteryIsOk(float temperature, float soc, float chargeRate) 
@@ -36,11 +58,11 @@ bool batteryIsOk(float temperature, float soc, float chargeRate)
   bool BatteryStatus = temperatureIsOk(temperature)&socIsOk(soc)&chargeRateIsOk(chargeRate);
   if(BatteryStatus)
   {
-    printMessage("Battery status is OK!\n", "Batteriezustand ist ok!\n");
+    printMessage(currentLanguage ,"BatteryOK");
   }
   else
   {
-    printMessage("Battery status is not OK!\n", "Batteriezustand ist nicht ok!\n");
+    printMessage(currentLanguage ,"BatteryNotOK");
   }
   return(BatteryStatus);
 }
