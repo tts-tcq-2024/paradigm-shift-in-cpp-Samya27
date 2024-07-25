@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Message.hpp"
+#include "PrintMessage.hpp"
 
 void printMessage(const std::string& messageEnglish, const std::string& messageGerman)
 {
